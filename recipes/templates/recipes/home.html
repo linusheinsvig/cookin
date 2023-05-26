@@ -1,0 +1,12 @@
+{% extends 'recipes/base.html' %}
+
+
+    {% block content %}
+    <h1>Cookin App Home</h1>
+
+    {% for recipe in recipes %}
+        <h2>{{ recipe.title }}</h2>
+        <p>{{ recipe.author }} | {{ recipe.date_posted }} </p>
+        <p>{{ recipe.ingrediens }}</p>
+    {% endfor %}
+    {% endblock content %}

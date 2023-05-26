@@ -1,11 +1,34 @@
 from django.shortcuts import render, HttpResponse
 
+recipes = [{
+    'author': 'Linus',
+    'title': 'Arrabiata',
+    'ingrediens': 'Pasta, Tomato, Garlic',
+    'date_posted': '26 May, 2023'
+},
+{
+    'author': 'Linus',
+    'title': 'Carbonara',
+    'ingrediens': 'Pasta, Tomato, Garlic',
+    'date_posted': '18 May, 2023'
+},
+{
+    'author': 'Linus',
+    'title': 'Pizza',
+    'ingrediens': 'Pasta, Tomato, Garlic',
+    'date_posted': '20 May, 2023'
+}
+]
+
 # Create your views here.
 
 
 def home(request):
-    return HttpResponse('<h1>Welcome to Cookin</h1>')
+    context = {
+        'recipes': recipes
+    }
+    return render(request, 'recipes/home.html', context)
 
 
 def about(request):
-    return HttpResponse('<h1>Cookin is a recipes app for you to view and share your favorite recipes!</h1>')
+    return render(request, 'recipes/about.html')
