@@ -11,31 +11,31 @@ hamburger.addEventListener("click", () => {
     navMenu.classList.remove("active");
   }))
 
-  let slideIndex = 1;
-showSlides(slideIndex);
+  var currentSlide = 1;
+  var totalSlides = document.querySelectorAll('.slider img').length;
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  function prevSlide() {
+    if (currentSlide === 1) {
+      currentSlide = totalSlides;
+    } else {
+      currentSlide--;
+    }
+    showSlide(currentSlide);
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+
+  function nextSlide() {
+    if (currentSlide === totalSlides) {
+      currentSlide = 1;
+    } else {
+      currentSlide++;
+    }
+    showSlide(currentSlide);
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+
+  function showSlide(slideNumber) {
+    var slides = document.querySelectorAll('.slider img');
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+    slides[slideNumber - 1].style.display = 'block';
+  }
