@@ -1,12 +1,24 @@
 {% extends 'recipes/base.html' %}
 
+{% block content %}
 
-    {% block content %}
-    <h1>Cookin App Home</h1>
+    <section class="carusel">
+        <div class="carusel-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="https://images.pexels.com/photos/718742/pexels-photo-718742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                <img id="slide-2" src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                <img id="slide-3" src="https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+            </div>
+        </div>
+    </section>
 
-    {% for recipe in recipes %}
-        <h2>{{ recipe.title }}</h2>
-        <p>{{ recipe.author }} | {{ recipe.date_posted }} </p>
-        <p>{{ recipe.ingrediens }}</p>
-    {% endfor %}
-    {% endblock content %}
+  {% for recipe in recipes %}
+
+  <div>
+      <h2>{{ recipe.title }}</h2>
+      <p>{{ recipe.author }} | {{ recipe.date_posted }} </p>
+      <p>{{ recipe.ingrediens }}</p>
+  </div>
+  {% endfor %}
+
+  {% endblock content %}
