@@ -1,0 +1,21 @@
+{% extends 'recipes/base.html' %}
+
+{% block content %}
+
+<h3>Recipe # {{ object.id }}</h3>
+
+<div class="container">
+  <div class="recipes">
+    <h5>{{ object.title }}</h5>
+    <h6>{{ object.author }}</h6>
+    <p>{{ object.ingrediens }}</p>
+    <h6>{{ object.updated_at|date:"F d, Y" }}</h6>
+  </div>
+</div>
+
+
+
+
+{% endblock content %}   
+
+
