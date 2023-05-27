@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from . import models
 
 recipes = [{
     'author': 'Linus',
@@ -24,11 +25,12 @@ recipes = [{
 
 
 def home(request):
-    context = {
-        'recipes': recipes
-    }
-    return render(request, 'recipes/home.html', context)
+    return render(request, 'recipes/home.html')
 
 
 def about(request):
-    return render(request, 'recipes/about.html')
+    recipes = models.Recipe.objects.all()
+    context = {
+        'recipes': recipes
+    }
+    return render(request, 'recipes/about.html', context)

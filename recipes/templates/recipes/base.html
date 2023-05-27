@@ -11,15 +11,15 @@
 <body>
 
     <header>
-        <div class="container"> 
+        <div class="nav-container"> 
            <nav class="navbar">
               <a href="#" class="nav-branding">Cookin!</a>
               <ul class="nav-menu">
                  <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="{% url 'cookin-home' %}" class="nav-link">Home</a>
                  </li>
                  <li class="nav-item">
-                    <a href="#" class="nav-link">Recipes</a>
+                    <a href="{% url 'cookin-about' %}"" class="nav-link">Recipes</a>
                  </li>
                  <li class="nav-item">
                     <a href="#" class="nav-link">Log In</a>
@@ -40,7 +40,7 @@
 {% endblock content %}
 
 <footer>
-   <div class="container">
+   <div>
      <p>&copy; 2023 Cookin. All rights reserved.</p>
    </div>
  </footer>

@@ -16,7 +16,7 @@ a{
   text-decoration: none;
 }
 
-.container{
+.nav-container{
   max-width: 1224px;
   width: 90%;
   margin: 0 auto;
@@ -112,8 +112,8 @@ position: relative;
 }
 
 .slider img {
-max-width: 100vw;
-aspect-ratio: 16 / 6.5;
+min-width: 100vw;
+max-height: 80vh;
 flex: 1 0 100%;
 scroll-snap-align: start;
 object-fit: cover;
@@ -187,7 +187,33 @@ right: 20px;
 }
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  padding: 2em;
+}
+
+.recipes {
+  background-color: aliceblue;
+  margin-inline: auto;
+  text-align: center;
+  width: 300px;
+  border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
 footer {
+position: absolute;
+bottom: 0;
+width: 100%;
 background-color: black;
 color: white;
 padding: 20px 0;
