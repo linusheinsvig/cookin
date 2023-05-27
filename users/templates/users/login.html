@@ -1,0 +1,23 @@
+{% extends 'recipes/base.html' %}
+
+{% block content %}
+
+<div class="register-form">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <fieldset class="form">
+            <legend>Log In!</legend>
+            {{ form.as_p }}
+        </fieldset>
+        <div class="form">
+            <input type="submit" value="Login">
+        </div>
+    </form>
+    <div>
+        <a href="#">Not a member yet? Create an account!</a>
+    </div>
+</div>
+
+
+
+{% endblock content %}   
