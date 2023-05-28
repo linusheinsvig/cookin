@@ -11,9 +11,9 @@ li{
   list-style: none;
 }
 
-a{
-  color: white;
+a {
   text-decoration: none;
+  color: black;
 }
 
 .nav-container{
@@ -29,6 +29,7 @@ a{
   align-items: center;
 }
 .nav-branding{
+  color: white;
   font-size: 4rem;
 }
 .nav-menu{
@@ -40,6 +41,7 @@ a{
 .nav-link{
   font-size: 2rem;
   transition: 0.3s ease-out;
+  color: white;
 }
 .nav-link:hover{
   color: dodgerblue;
@@ -188,19 +190,45 @@ right: 20px;
 }
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  background-color: aqua;
+/* Recipes */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 2em;
+  gap: 2em; 
 }
 
 .recipes {
-  background-color: aliceblue;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+
+/* Forms */
+
+.register-form {
+  padding: 2em;
+}
+
+.form {
   margin-inline: auto;
+  width: 50vw;
+  padding: 2em;
+  font-size: 1.3em;
+}
+
+.form-div {
   text-align: center;
-  width: 300px;
-  border: 2px solid black;
+  padding: 1em;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.form-div > input {
+  font-size: 1em;
+  padding: 0.5em;
+  background-color: greenyellow;
 }
 
 
@@ -212,7 +240,7 @@ right: 20px;
 
 
 footer {
-position: absolute;
+position: fixed;
 bottom: 0;
 width: 100%;
 background-color: black;
