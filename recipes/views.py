@@ -53,3 +53,10 @@ class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return self.request.user == recipe.author
 
 
+class ProfileView(LoginRequiredMixin, ListView):
+    model = models.Recipe
+    template_name = 'users/profile.html'
+    context_object_name = 'recipes'
+
+    def get_queryset(self):
+        return super().get_queryset().filter(author=self.request.user)
