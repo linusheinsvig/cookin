@@ -1,0 +1,23 @@
+{% extends 'recipes/base.html' %}
+
+{% block content %}
+
+<div class="register-form">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <fieldset class="form">
+            <legend>Add Recipe</legend>
+            {{ form.as_p }}
+        </fieldset>
+        <div class="form">
+            <input type="submit" value="Save">
+        </div>
+    </form>
+    <div>
+        <a href="{% url 'cookin-home' %}">Cancel</a>
+    </div>
+</div>
+
+
+
+{% endblock content %}   
