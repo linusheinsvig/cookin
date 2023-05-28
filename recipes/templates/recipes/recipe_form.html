@@ -7,15 +7,15 @@
         {% csrf_token %}
         <fieldset class="form">
             <legend>Add Recipe</legend>
-            {{ form.as_table }}
+            {{ form.as_p }}
         </fieldset>
-        <div class="form">
+        <div class="form-div">
             <input type="submit" value="Save">
+            <div>
+                <a href="{% url 'cookin-home' %}">Cancel</a>
+            </div>
         </div>
     </form>
-    <div>
-        <a href="{% url 'cookin-home' %}">Cancel</a>
-    </div>
 </div>
 
 
