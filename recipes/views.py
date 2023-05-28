@@ -17,10 +17,20 @@ class RecipeListView(ListView):
     template_name = 'recipes/about.html'
     context_object_name = 'recipes'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['view_mode'] = 'list'
+        return context
+
 
 class RecipeDetailView(DetailView):
     model = models.Recipe
     context_object_name = 'recipe'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['view_mode'] = 'detail'
+        return context
 
 
 class RecipeCreateView(LoginRequiredMixin, CreateView):
@@ -61,3 +71,5 @@ class ProfileView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         return super().get_queryset().filter(author=self.request.user)
+
+

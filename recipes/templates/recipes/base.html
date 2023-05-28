@@ -13,7 +13,7 @@
     <header>
         <div class="nav-container"> 
            <nav class="navbar">
-              <a href="#" class="nav-branding">Cookin!</a>
+              <a href="{% url 'cookin-home' %}" class="nav-branding">Cookin!</a>
               <ul class="nav-menu">
                  <li class="nav-item">
                     <a href="{% url 'cookin-home' %}" class="nav-link">Home</a>
@@ -58,11 +58,7 @@
 {% block content %}
 {% endblock content %}
 
-<footer>
-   <div>
-     <p>&copy; 2023 Cookin. All rights reserved.</p>
-   </div>
- </footer>
+
 
 
 <script src="{% static 'js/script.js' %}"></script>

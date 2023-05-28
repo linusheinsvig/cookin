@@ -2,19 +2,17 @@
 
 {% block content %}
 
-<h3>Recipe # {{ object.id }}</h3>
 
-<div class="container">
-  <div class="recipes">
+<div class="recipe-detail">
     <h1>{{ recipe.title }}</h1>
+    <h4>{{ object.updated_at|date:"F d, Y" }}</h4>
 <p>Ingredients: {{ recipe.ingredients }}</p>
 <p>Description: {{ recipe.description }}</p>
 {% if recipe.picture_link %}
   <img src="{{ recipe.picture_link }}" alt="Recipe Picture">
 {% endif %}
-    <h6>{{ object.updated_at|date:"F d, Y" }}</h6>
   </div>
-</div>
+
 
 {% if object.author == user or user.is_staff %}
 <a href="{% url 'recipe-update' object.id %}">Update</a>
