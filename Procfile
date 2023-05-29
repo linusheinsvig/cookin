@@ -1,1 +1,1 @@
-web: gunicorn cookin.wsgi
+web: gunicorn config.wsgi
