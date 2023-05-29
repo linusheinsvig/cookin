@@ -6,38 +6,20 @@
   <div class="carousel-wrapper">
     <button class="slider-button previous" onclick="prevSlide()">&#8249;</button>
     <div class="slider">
+      {% for recipe in recipes %}
       <div class="slide">
-        <img id="slide-1" src="https://images.pexels.com/photos/718742/pexels-photo-718742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+        <img id="slide-{{ forloop.counter }}" src="{{ recipe.picture_link }}" alt="">
         <div class="slide-caption">
           <div class="caption-text">
-          <p>Recipe 1</p>
-          <button class="caption-button">See Recipe</button>
-        </div>
-        </div>
-      </div>
-      <div class="slide">
-        <img id="slide-2" src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
-        <div class="slide-caption">
-          <div class="caption-text">
-            <p>Recipe 1</p>
-            <button class="caption-button">See Recipe</button>
+            <p>{{ recipe.title }}</p>
+            <a href="{% url 'recipe-detail' recipe.pk %}" class="caption-button">See Recipe</a>
           </div>
         </div>
       </div>
-      <div class="slide">
-        <img id="slide-3" src="https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
-        <div class="slide-caption">
-          <div class="caption-text">
-            <p>Recipe 1</p>
-            <button class="caption-button">See Recipe</button>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
-    
     <button class="slider-button next" onclick="nextSlide()">&#8250;</button>
   </div>
 </section>
-
 
 {% endblock content %}

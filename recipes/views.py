@@ -3,13 +3,15 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
 from . import models
+from .models import Recipe
 
 
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'recipes/home.html')
+    recipes = Recipe.objects.all()  # Get all recipes
+    return render(request, 'recipes/home.html', {'recipes': recipes})
 
 
 class RecipeListView(ListView):
