@@ -2,26 +2,28 @@
 
 {% block content %}
 
-
+<div class="detail-heading">
+  <h1>{{ recipe.title }}</h1>
+  <h4>{{ object.updated_at|date:"F d, Y" }}</h4>
+</div>
 <div class="recipe-detail">
-    <h1>{{ recipe.title }}</h1>
-    <h4>{{ object.updated_at|date:"F d, Y" }}</h4>
-<p>Ingredients: {{ recipe.ingredients }}</p>
-<p>Description: {{ recipe.description }}</p>
-{% if recipe.picture_link %}
-  <img src="{{ recipe.picture_link }}" alt="Recipe Picture">
-{% endif %}
+  <div class="recipe-content">
+    {% if recipe.picture_link %}
+    <img class="recipe-image" src="{{ recipe.picture_link }}" alt="Recipe Picture">
+    {% endif %}
+    
+    <div class="recipe-text">
+      <h3>Ingredients:</h3> 
+      <p>{{ recipe.ingredients }}</p>
+      <h3>Description:</h3> 
+      <p>{{ recipe.description }}</p>
+    </div>
   </div>
-
-
-{% if object.author == user or user.is_staff %}
-<a href="{% url 'recipe-update' object.id %}">Update</a>
-<a href="{% url 'recipe-delete' object.id %}">Delete</a>
-{% endif %}
-
-
-
-
+  {% if object.author == user or user.is_staff %}
+  <a href="{% url 'recipe-update' object.id %}">Update</a>
+  <a href="{% url 'recipe-delete' object.id %}">Delete</a>
+  {% endif %}
+</div>
 
 {% endblock content %}   
 

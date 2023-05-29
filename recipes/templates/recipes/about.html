@@ -6,10 +6,9 @@
   {% for recipe in recipes %}
   <a href="{% url 'recipe-detail' recipe.pk %}" class="card-link">
     <div class="recipes">
-      <h5>{{ recipe.title }}</h5>
-      <h6>{{ recipe.author }}</h6>
-      <p>Ingredients: {{ recipe.ingredients }}</p>
-      <p>Description: {{ recipe.description }}</p>
+      <h2>{{ recipe.title }}</h2>
+      <h3>Ingredients:</h3> 
+      <p>{{ recipe.ingredients }}</p>
       {% if recipe.picture_link %}
         {% if view_mode == 'list' %}
           <img src="{{ recipe.picture_link }}" alt="Recipe Picture" class="small-image">
@@ -17,7 +16,7 @@
           <img src="{{ recipe.picture_link }}" alt="Recipe Picture" class="big-image">
         {% endif %}
       {% endif %}
-      <h6>{{ recipe.updated_at|date:"F d, Y" }}</h6>
+      <h5>{{ recipe.author }}</h5>
     </div>
   </a>
   {% endfor %}

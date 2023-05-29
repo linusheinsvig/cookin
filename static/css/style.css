@@ -16,8 +16,12 @@ a {
   color: black;
 }
 
+p {
+  padding: 1em;
+  text-align: center;
+}
+
 .nav-container{
-  max-width: 1224px;
   width: 90%;
   margin: 0 auto;
 }
@@ -116,7 +120,7 @@ position: relative;
 
 .slider img {
 min-width: 100vw;
-max-height: 90vh;
+max-height: 88vh;
 flex: 1 0 100%;
 scroll-snap-align: start;
 object-fit: cover;
@@ -127,12 +131,19 @@ object-fit: cover;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 8px 16px;
   font-size: 1.5rem;
   width: 100%;
   text-align: center;
+}
+
+.caption-text {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 300px;
+  margin-inline: auto;
+  border-radius: 15px;
+  padding: 1em;
 }
 
 .caption-button {
@@ -180,7 +191,7 @@ right: 20px;
 @media (max-width: 768px) {
 .slider {
   aspect-ratio: unset;
-  height: 80vh;
+  height: 90vh;
 }
 
 .slider img {
@@ -195,15 +206,14 @@ right: 20px;
 .grid-container {
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   padding: 2em;
-  gap: 3em; 
+  gap: 2em; 
 }
 
 .recipes {
   border: 1px solid black;
   padding: 10px;
-  width: 300px;
   margin-inline: auto;
   box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.61);
   transform: scale(1);
@@ -216,29 +226,69 @@ right: 20px;
   cursor: pointer;
 }
 
+.recipe-content {
+  display: flex;
+  align-items: center;
+}
+
+.recipe-image {
+  width: 50%; 
+  margin-right: 10px; 
+  padding: 1em;
+}
+
+.detail-heading {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.recipe-text {
+  flex-grow: 1;
+  text-align: center;
+  padding: 1em;
+}
+
 .recipe-detail {
   text-align: center;
 }
 
 .small-image {
-  width: 100px;
-  height: 100px;
-}
-
-.big-image {
-  width: 200px;
-  height: 200px;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .recipe-content {
+    flex-direction: column;
+  }
+
+  .recipe-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 480px) {
   .grid-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .recipe-content {
+    flex-direction: column;
+  }
+
+  .recipe-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .caption-text {
+    margin-bottom: 1em;
   }
 }
 

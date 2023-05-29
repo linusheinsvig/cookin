@@ -3,7 +3,6 @@ from . import views
 from .views import ProfileView
 
 'app/model_viewtype'
-'recipes/recipes_detail.html'
 
 urlpatterns = [
     path('', views.home, name='cookin-home'),
