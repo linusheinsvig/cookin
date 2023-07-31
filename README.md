@@ -25,3 +25,13 @@ This project is built in Django using Python, CSS, HTML and Javascript.
 </ul>
 
 ### User Stories
+
+
+
+## The Skeleton Plane
+### Wireframes
+![Alt text](<Cookin Home Page.png>)
+
+![Alt text](<Cookin Recipe Page.png>)
+
+![Alt text](<Cookin Recipe Details.png>)
