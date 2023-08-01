@@ -108,6 +108,43 @@ The user get to add a name to the recipe, a list of ingedients, a description an
 ![Alt text](<images/Skärmavbild-2023-08-01-kl.-16.37.42 (1).webp>)
 
 ## Future Enhancements
+There are quite a few things I would like to add/ enhance on this project in the future.
+At the moment its just barely up and running with the basics
+
+Enhancements:
+<ul>
+<li>Most of the design elements on the page 
+    <ul>
+        <li>Colors and Fonts</li>
+    </ul>
+        <li>User Profiles  
+    <ul>
+        <li>Add a picture and personalize your profile more</li>
+    </ul>
+<li>Creating recipes
+    <ul>
+        <li>The layout of the form</li>
+        <li>Add ingredients as a list instead of a text box</li>
+        <li>Choice of uploading or linking an image</li>
+    </ul>
+</ul>
+
+More Features:
+<ul>
+    <li>Ratings on recipes</li>
+        <ul>
+            <li>Making it possible for other users and views to give feedback on recipes</li>
+        </ul>
+    <li>Viewing other profiles</li>
+        <ul>
+            <li>If you find a user making recipes you like, you can view all their recipes</li>
+        </ul>
+    <li>Log in with social network accounts</li>
+        <ul>
+            <li>Make it possible to login with facebook or google accounts, making it easier for people to sign up</li>
+        </ul>
+</ul>
+    
 
 ## Testing
 
