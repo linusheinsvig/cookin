@@ -35,3 +35,27 @@ This project is built in Django using Python, CSS, HTML and Javascript.
 ![Alt text](<Cookin Recipe Page.png>)
 
 ![Alt text](<Cookin Recipe Details.png>)
+
+## The Surface Plane
+### Design
+
+### Images
+
+## Features
+### Home Page
+
+### Navigartion Bar
+
+### Recipe Cards
+
+### Recipe Details
+
+### User Profile
+
+### Create / Edit a Recipe
+
+## Future Enhancements
+
+## Testing
+
+## Deployment
