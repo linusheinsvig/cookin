@@ -25,8 +25,24 @@ This project is built in Django using Python, CSS, HTML and Javascript.
 </ul>
 
 ### User Stories
+Since I knew I dident have much time to write this project I settled with six User Stories that where all must haves
+<ul>
+<li>As a site owner I can display recipes so that people can get inspiration on what to cook tonight</li>
+<li>As a user I can create an account so I can log in to my profile</li>
+<li>As a user I can add recipes so that other people can view them and get inspiration</li>
+<li>As a user I can edit my recipes if I made a misstake when I uploaded it</li>
+<li>As a user I can add a image to my recipe so that people can get an idea what the dish looks like</li>
+<li>As a user I can delete my recipe if I dont want it visible on the site anymore</li>
+</ul>
 
-
+## The Scope Plane
+### Features Planned
+<ul>
+<li>Everybody - View recipes & Create an account</li>
+<li>User profile - Create, Read, Update & Delete</li>
+<li>Users Recipes - Users can Create, Read, Update and Delete their own recipes</li>
+<li>Users Profile - User can log in to their profile, view their own recipes in a seperate list & log out of their account</li>
+</ul>
 
 ## The Skeleton Plane
 ### Wireframes
@@ -71,12 +87,14 @@ It displays recipe images from the database, with name and a link to view the fu
 ### Recipe Cards
 The Recipe page contains clickable cards for all the recipes in the database.
 The cards show the name of the recipe, what ingredients are used, a image of the recipe and the name of the author
+
 ![Alt text](<images/Skärmavbild-2023-08-01-kl.-16.37.26 (1).webp>)
 
 ### Recipe Details
 The detail page for each recipe has a bigger image of the recipe on the left side of the screen.
 On the right side you can see a list of ingredients and a decription on how to make it.
 If your the user how created the recipe you get the option to edit or delete the recipe on the bottom of the page.
+
 ![Alt text](<images/Skärmavbild-2023-08-01-kl.-16.58.04 (1).webp>)
 
 
