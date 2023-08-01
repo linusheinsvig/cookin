@@ -69,12 +69,25 @@ The big star of the home page is the Image Carusel that takes up the full screen
 It displays recipe images from the database, with name and a link to view the full recipe.
 
 ### Recipe Cards
+The Recipe page contains clickable cards for all the recipes in the database.
+The cards show the name of the recipe, what ingredients are used, a image of the recipe and the name of the author
+![Alt text](<images/Skärmavbild-2023-08-01-kl.-16.37.26 (1).webp>)
 
 ### Recipe Details
+The detail page for each recipe has a bigger image of the recipe on the left side of the screen.
+On the right side you can see a list of ingredients and a decription on how to make it.
+If your the user how created the recipe you get the option to edit or delete the recipe on the bottom of the page.
+![Alt text](<images/Skärmavbild-2023-08-01-kl.-16.58.04 (1).webp>)
+
 
 ### User Profile
+On your user profile you get a page similar to the Recipe Cards page but it only contains the recipes uploaded by you.
 
 ### Create / Edit a Recipe
+The page to add or edit a recipe could use alot of work but it contains the most nessesary at the moment.
+The user get to add a name to the recipe, a list of ingedients, a description and a link to an image.
+
+![Alt text](<images/Skärmavbild-2023-08-01-kl.-16.37.42 (1).webp>)
 
 ## Future Enhancements
 
