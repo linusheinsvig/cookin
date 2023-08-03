@@ -6,14 +6,13 @@ from . import models
 from .models import Recipe
 
 
-# Create your views here.
-
-
+# View function for the home page
 def home(request):
     recipes = Recipe.objects.all()  # Get all recipes
     return render(request, 'recipes/home.html', {'recipes': recipes})
 
 
+# Class-based view for displaying a list of recipes
 class RecipeListView(ListView):
     model = models.Recipe
     template_name = 'recipes/about.html'
@@ -25,6 +24,7 @@ class RecipeListView(ListView):
         return context
 
 
+# Class-based view for displaying a single recipe in detail
 class RecipeDetailView(DetailView):
     model = models.Recipe
     context_object_name = 'recipe'
@@ -35,6 +35,7 @@ class RecipeDetailView(DetailView):
         return context
 
 
+# Class-based view for creating a new recipe (requires login)
 class RecipeCreateView(LoginRequiredMixin, CreateView):
     model = models.Recipe
     fields = ['title', 'ingredients', 'description', 'picture_link']
@@ -44,6 +45,7 @@ class RecipeCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
+# Class-based view for updating an existing recipe (requires login and ownership of the recipe)
 class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = models.Recipe
     fields = ['title', 'ingredients', 'description', 'picture_link']
@@ -57,6 +59,7 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return super().form_valid(form)
 
 
+# Class-based view for deleting a recipe (requires login and ownership of the recipe)
 class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = models.Recipe
     success_url = reverse_lazy('cookin-home')
@@ -66,6 +69,7 @@ class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return self.request.user == recipe.author
 
 
+# Class-based view for displaying a user's profile and their authored recipes (requires login)
 class ProfileView(LoginRequiredMixin, ListView):
     model = models.Recipe
     template_name = 'users/profile.html'
