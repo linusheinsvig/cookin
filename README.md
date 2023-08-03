@@ -78,11 +78,14 @@ If your not logged in you get the options Home, Recipes, Log In and Register.
 If your logged in the Log In and Register gets swapped out to Add a Recipe, Profile and Log out.
 On smaller screens the nav bar changes to a hamburger meny with the same options.
 
-![Alt text](<images/Skärmavbild-2023-08-01-kl.-16.36.43 (1).webp>)
+![Alt text](images/Ska%CC%88rmavbild-2023-08-03-kl.-11.13.48.webp)
+![Alt text](images/Ska%CC%88rmavbild-2023-08-03-kl.-11.14.00.webp)
 
 ### Home Page
 The big star of the home page is the Image Carusel that takes up the full screen.
 It displays recipe images from the database, with name and a link to view the full recipe.
+
+![Alt text](<images/Skärmavbild-2023-08-01-kl.-16.36.43 (1).webp>)
 
 ### Recipe Cards
 The Recipe page contains clickable cards for all the recipes in the database.

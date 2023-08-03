@@ -11,7 +11,7 @@
         <img id="slide-{{ forloop.counter }}" src="{{ recipe.picture_link }}" alt="">
         <div class="slide-caption">
           <div class="caption-text">
-            <p>{{ recipe.title }}</p>
+            <h3>{{ recipe.title }}</h3>
             <a href="{% url 'recipe-detail' recipe.pk %}" class="caption-button">See Recipe</a>
           </div>
         </div>
