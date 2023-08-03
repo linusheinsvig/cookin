@@ -3,7 +3,8 @@ Cookin is a site made for sharing recipes and food inspiration!
 A place to find new favourite dishes or a place to spread your own personal favorite recipes with the world!
 This project is built in Django using Python, CSS, HTML and Javascript.
 
-## Table of Content
+The live site can be found here:
+https://cookiin.herokuapp.com/
 
 ## UX
 ### The Strategy Plane
@@ -150,6 +151,27 @@ More Features:
     
 
 ## Testing
+
+### HTML Validation
+To test the HTML of this project I used W3C Markup Validation Service.
+Due to the way this Django project is set up with templates it was not possible to paste in the link to the live site.
+Instead I had to use Chrome developer tools and copy the renderd HTML from there and paste it into: 
+https://validator.w3.org/nu/#textarea
+
+From this test I recived no warnings or errors.
+
+
+![Alt text](images/Ska%CC%88rmavbild-2023-08-03-kl.-11.22.08.webp)
+
+### CSS Validation
+To test the CSS file for this project I used W3C Jigsaw CSS-validator which can be found here:
+https://jigsaw.w3.org/css-validator/
+
+![Alt text](images/Ska%CC%88rmavbild-2023-08-03-kl.-10.58.12.webp)
+
+### Lighthouse Test
+
+![Alt text](images/Ska%CC%88rmavbild-2023-08-03-kl.-09.13.49.webp)
 
 ## Deployment
 
