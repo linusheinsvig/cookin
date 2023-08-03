@@ -173,6 +173,20 @@ https://jigsaw.w3.org/css-validator/
 
 ![Alt text](images/Ska%CC%88rmavbild-2023-08-03-kl.-09.13.49.webp)
 
+### Manual Testing
+Sadly I couldent find the time to document the manual testing stages in a good way.
+But during the development stage and on the live site I tried to:
+<ul>
+    <li>Create Users:</li>
+    <ul><li>Worked as expected</li></ul>
+    <li>Add a recipe:</li>
+    <ul><li>Worked as expected</li></ul>
+    <li>Edit a recipe:</li>
+    <ul><li>Worked as expected</li></ul>
+    <li>Delete a recipe:</li>
+    <ul><li>Worked as expected</li></ul>
+</ul>
+
 ## Deployment
 
 This site was deployed via Heroku and the live link can be found here - https://cookiin.herokuapp.com/
